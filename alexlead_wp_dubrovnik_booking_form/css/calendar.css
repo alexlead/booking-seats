@@ -1,0 +1,296 @@
+/* - Common elements - */
+.table-wrapper{
+    display: table;
+    width: 100%;
+}
+.table-wrapper>div{
+    display: table-row;
+}
+.table-wrapper>div>div{
+    display: table-cell;
+    vertical-align: middle;
+}
+.col-50{
+    display: inline-block;
+    width: 50%;
+}
+/* bottom buttons */
+.bottomBut{
+    margin-top: 22px;
+}
+.bottomBut input[type='submit']{
+    display: inline-block;
+    height: 60px;
+}
+.bottomBut div.nextBut, .bottomBut input[type='submit'], .bottomBut div.prevBut{
+    display: inline-block;
+    width: 165px;
+    padding: 10px 0;
+    border: none;
+    color: rgb(0,0,0);
+    background: rgb(227,227, 227);
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.bottomBut>.col-50:last-child{
+    text-align: right;
+}
+.bottomBut div.enStep, .bottomBut input[type='submit']{
+    color: rgb(255, 255, 255);
+    background: rgb(58, 83, 147);
+        cursor: pointer;
+}
+/* -- Constructor list elements -- */
+#bookingForm{
+    height: 700px;
+}
+#bookingForm ul{
+    padding: 0;
+}
+#bookingForm ul li{
+    list-style: none;
+   display: none;
+}
+#bookingForm ul li:first-child{
+    display: block;
+}
+
+/* --  form header  --  */
+
+.stepInstruction{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+
+.bookFormConstructor{
+    height: 475px;
+    background: rgb(255,255,255);
+    color: rgb(0,0,0);
+}
+
+/* -- calendar -- */
+#bookingcalendar{
+    position: relative;
+
+}
+#bookingcalendar ul{
+    padding: 0 20px 0 2px;
+ }
+#bookingcalendar ul li{
+    list-style: none;
+    display: none;
+}
+#bookingcalendar ul li:first-child{
+    display: block;
+}
+#calendBefore, #calendAfter{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.25;
+}
+#calendBefore{
+    left: 150px;
+    top: 10px;
+}
+#calendAfter{
+    right: 150px;
+    top: 10px;
+}
+#calendBefore:hover , #calendAfter:hover{
+    opacity: 1;
+}
+
+.month{
+    text-align: center;
+}
+.month p{
+font-size: 26px;
+margin: 17px auto 30px;
+padding: 15px;
+width: 100px;
+}
+.month td{
+     text-align: center;
+}
+.month thead td{
+color: darkgrey;
+font-size: 16px;
+}
+.month tbody td span{
+    display: block;
+    padding: 10px 0;
+    width: 56px;
+    text-align: center;
+    margin: 3px auto 3px;
+    font-size: 22px;
+    font-weight: bold;
+    border: 1px solid rgb(255, 255, 255);
+}
+.month tbody td:not(.chooseenable) span{
+
+    border: 1px solid rgb(116, 177, 242);
+    background: rgb(227, 227, 227);
+
+}
+.month td.chooseenable{
+    cursor: pointer;
+}
+.month td.chooseenable:hover span{
+    border: 1px solid rgb(116, 177, 242);    
+}
+#today span{
+    border: 1px solid rgb(116, 177, 242);
+}
+.month table{
+    width: 100%;
+}
+.month table .selected span, #today.selected span{
+        border: 1px solid rgb(194, 18, 18);
+}
+.month table tbody td:nth-child(6), .month table tbody td:nth-child(7){
+    color: rgb(111, 146, 242);
+}
+/* -- Intervals -- */
+#dateSeats, #dateSeatsOrder{
+    height: 74px;
+    border-bottom: 1px solid rgb(227, 227, 227);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+}
+#dateSeatsOrder{
+    height: 137px;
+}
+
+#interv{
+    min-height: 270px;
+    margin: 0 auto;
+    max-width: 1030px;
+}
+
+.intervals{
+    display: inline-block;
+    padding: 10px 10px 10px 20px;
+    border: 1px solid rgb(116, 177, 242);
+    margin: 8px 24px;
+    font-size: 14px;
+    width: 171px;
+}
+.intervals p{
+    width: 89px;
+    display: inline-block;
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}
+.intervals p big{
+    font-size: 14px;
+}
+.intervals.intDisable{
+    border: 1px solid rgb(227, 227, 227);
+}
+.intervals.intEnable{
+    cursor:pointer;
+}
+.intervals.intEnable:hover{
+    border: 1px solid rgb(195, 18, 18);
+}
+.intervals span{
+    display: inline-block;
+    padding: 12px;
+    margin-left: 2px;
+    border: 1px solid rgb(116, 177, 242);
+    font-size: 15px;
+    background: rgb(255,255,255);
+}
+.intervals.intEnable.intGreen span{
+    border: 1px solid rgb(116, 177, 242);
+}
+.intervals.intEnable.intRed span{
+    border: 1px solid rgb(195, 18, 18);
+}
+.intervals.intEnable.intYellow span{
+        border: 1px solid rgb(255, 236, 86);
+}
+.intervals.intEnable.intSel{
+    background: rgb(227, 227, 227);
+}
+
+.intervals.intDisable span{
+    border: 1px solid rgb(227, 227, 227);
+}
+
+/*  -- seats  -- */
+#seats{
+    text-align: center;
+}
+.seat{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border: 1px solid rgb(227, 227, 227);
+    margin: 5px 3px;
+}
+.seat.seatEnable{
+    background: rgb(93,169,243);
+    border-color: rgb(93,169,243);
+    cursor: pointer;
+}
+.seat.seatEnable.seatsOrder{
+    background: rgb(195,18,18);
+    border-color: rgb(195,18,18);
+}
+.seat.seatEnable.seatsHover{
+    background: rgb(195,18,18);
+}
+.seat.seatEnable.seatsOrder.seatsHover{
+    border-color: rgb(93,169,243);
+}
+
+/* -- contact form -- */
+#contactForm{
+    padding: 65px;
+    font-size: 20px;
+    color: rgb(187, 187, 187);
+}
+#contactForm>div{
+    height: 94px;
+}
+#contactForm label{
+    width: 280px;
+    display: inline-block;
+    margin: 15px 0;
+}
+#contactForm label span{
+    color: rgb(195, 18, 18);
+    font-size: 36px;
+}
+#contactForm input{
+    width: 480px;
+    vertical-align: middle;
+    border: 1px solid rgb(227,227,227);
+    padding: 5px 15px; 
+}
+/* --- last-child --- */
+.orderDetails{
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+.orderDetails p{
+    margin: 0;
+    padding: 0;
+}
